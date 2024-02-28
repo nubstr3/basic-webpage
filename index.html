@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Carbon Tiptoe</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="index.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+</head>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-large w3-padding custom-color w3-collapse w3-top" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-display-topleft w3-hide-large" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Carbon<br>Tiptoe</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="#calculator" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Calculator</a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+    <a href="#register" id="trigger-modal" class="w3-bar-item w3-button w3-hover-white" onclick="document.getElementById('ct-form').style.display='block'">Register</a>
+
+    <div id='ct-form' class="modal">
+  
+      <form class="modal-content animate" action="/action_page.php" method="post">
+        <div class="container">
+        <!--User Details-->
+          <div class="container"  id="userDetails">
+            <form>
+              <div id="userDetails">
+                <label for="fname" class='custom-register-color'>First name:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="lname" class='custom-register-color'>Last name:</label><br>
+                <input type="text" id="lname" name="lname"><br>
+                <label for="uName" class='custom-register-color'>Username:</label><br>
+                <input type="text" id="uName" name="uName"><br>
+                <label for="psw" class='custom-register-color'>Password:</label><br>
+                <input type="password" id="psw" name="psw">
+              </div>
+            </form>
+          </div>
+          <!--addresses-->
+          <div class="container" id="addresses">
+            <form>
+              <div id="addresses">
+                <label for="homeAdd" class='custom-register-color'>Home Address:</label><br>
+                <input type="text" id="homeAdd" name="homeAdd"><br>
+                <label for="workAdd" class='custom-register-color'>Work Address:</label><br>
+                <input type="text" id="workAdd" name="workAdd"><br>
+              </div>
+              
+            </form>
+          </div>
+          <!--contacts-->
+          <div class="container" id="contacts">
+            <form>
+              <div id="contacts">
+                <label for="mobile" class='custom-register-color'>Mobile Number:</label><br>
+                <input type="integer" id="mobile" name="mobile"><br>
+                <label for="email" class='custom-register-color'>Email:</label><br>
+                <input type="text" id="email" name="email"><br>
+              </div>
+              
+            </form>
+          </div>
+          <!--Register button-->
+          <div>
+            <button type="button" style="background-color:green">Register</button>
+            <button type="button" onclick="document.getElementById('ct-form').style.display='none'" class="cancelbtn" style="background-color:red">Cancel</button> 
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-padding w3-xlarge custom-color ">
+  <a href="javascript:void(0)" class="w3-button w3-margin-right custom-color " onclick="w3_open()">☰</a>
+  <span>Carbon Tiptoe</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Homepage -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>Calculate your carbon footprint today.</b></h1>
+    <h1 class="w3-xxxlarge w3-text-black"><b>Hompage.</b></h1>
+    <hr style="width:50px;border:5px solid black" class="w3-round">
+    <h2 class="w3-xxlarge w3-text-black">Welcome to the front page of Carbon Tiptoe, we are a proud non-profit organisation that strives to create a better world
+      where there is no pollution in the air. We strive to achieve this by spreading awareness of global pollution through our calculator!
+    </h2>
+    <a href="" class="w3-xlarge w3-text-blue">Try it now!</a>
+  </div>
+  <!--Calculator-->
+  <div class="w3-container" id="calculator" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-black"><b>Calculator.</b></h1>
+    <hr style="width:50px;border:5px solid black" class="w3-round">
+    <body>
+      <p>
+        Welcome to the front page of Carbon Tiptoe, we are a proud non-profit organisation that strives to create a better world
+      where there is no pollution in the air. We strive to achieve this by spreading awareness of global pollution through our calculator!
+      Welcome to the front page of Carbon Tiptoe, we are a proud non-profit organisation that strives to create a better world
+      where there is no pollution in the air. We strive to achieve this by spreading awareness of global pollution through our calculator!
+      </p>
+      <input type="image" src="image1.jpg" alt="global warming" width="60%" height="60%">
+      <p>
+        Welcome to the front page of Carbon Tiptoe, we are a proud non-profit organisation that strives to create a better world
+      where there is no pollution in the air. We strive to achieve this by spreading awareness of global pollution through our calculator!
+      Welcome to the front page of Carbon Tiptoe, we are a proud non-profit organisation that strives to create a better world
+      where there is no pollution in the air. We strive to achieve this by spreading awareness of global pollution through our calculator!
+      </p>
+      <p>
+        Welcome to the front page of Carbon Tiptoe, we are a proud non-profit organisation that strives to create a better world
+      where there is no pollution in the air. We strive to achieve this by spreading awareness of global pollution through our calculator!
+      Welcome to the front page of Carbon Tiptoe, we are a proud non-profit organisation that strives to create a better world
+      where there is no pollution in the air. We strive to achieve this by spreading awareness of global pollution through our calculator!  
+      </p>
+
+    </body>
+    
+  </div>
+  <!-- Contact Info -->
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-black"><b>Contact.</b></h1>
+    <hr style="width:50px;border:5px solid black" class="w3-round">
+    <p>Do you have any suggestions or questions? Fill out the form down below, we love your feedback!</p>
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
+    </form>  
+  </div>
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
